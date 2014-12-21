@@ -1,0 +1,73 @@
+---
+output: html_document
+---
+## About Clustering Iris
+
+### Introduction
+This is the documentation for this shiny application.
+This application was made as part of the **Coursera** online course Developing Data Products
+presented by Johns Hopkins University.
+
+The main purpose of this application was to make an interactive application to investigate how the un-supervised clustering methods Mclust and K-means would perform on the Iris dataset. 
+I also wanted to explore how the clustering would be affected if the data was reduced by principal component analysis.
+
+### Iris
+The Iris flower data set is famous data first used by statistician Ronald Fisher in 1936. The dataset consists of measurements on 50 flowers from three different species of Iris: Setosa, Virginica and Versicolor. The data consists of length measurements(cm) on the flowers
+* Sepal length
+* Sepal width
+* Petal length
+* Petal width
+
+For more information please visit
+http://en.wikipedia.org/wiki/Iris_flower_data_set
+http://en.wikipedia.org/wiki/Sepal
+
+### Methods
+I have no intention to explain the methods used in detail. If the reader is interested in understanding the methods used please follow the posted links.
+
+**K-means clustering** works by associating each observation by the cluster with the nearest mean. http://en.wikipedia.org/wiki/K-means_clustering
+
+**MClust** is a normal mixture modeling technique that uses the EM-algorithm to create a model-based clustering.
+http://www.stat.washington.edu/mclust/
+
+### PCA analysis
+Principal component analysis is a dimension reduction technique. 
+By projecting the data in the orthogonal directions of the maximal covariance or correlation the data is presented as latent variables ranked by how large proportion of the total variability of the original data set they can explain. 
+Data reduction can be made by using a subset of the principal components, preferably the first few. How many components that should be used can be determined using many different methods. 
+In this project I have chosen to use the first two component as they together explain 0.96% of the total variability.
+
+### How to use the application
+The Iris data is shown using a simple bivariate scatterplot. 
+
+#### Input
+
+* The variables on the x and y axis can be changed using two drop down menus. 
+* The user can choose among the original variables and the first two principal components.
+* Per default no clustering method is used.  
+* The user can select clustering method using a drop down menu.
+* The number of clusters can be changed from 2 to 5 using a slider.
+* The clustering can be made using the first two principal components by using the checkbox.
+
+#### Output
+
+* Results are presented in the scatterplot.
+* The shape always shows the Species of the Iris flowers.
+* The color shows the cluster assignment. If no method is used the color shows the species.
+* A table shows how the Species are distributed over the clusters
+
+### Rooms for improvement
+
+This application has room for improvement. As the time for the project was limited I did not have time to make the application as rich as I wanted to. To make this application more useful I would like to
+
+* Add support for more datasets or let the user be able to upload their own datasets
+* Make a more interactive scatterplots using for example ggvis
+* Add some more clustering methods
+* Add automatic reordering of the clusters so the user does not make this in her/his head.
+* Add some more sophisticated performance metrics
+* Add more information about the clustering
+
+### Source
+The source code for this project can be found here:
+https://github.com/gabrakadabra/
+
+
